@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+<title>LoginTest</title>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.2.js" charset="utf-8"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<div id="kakao_id_login"><a href = "https://kauth.kakao.com/oauth/authorize?client_id=56be861a71206f778fd48e53ee4c4623&redirect_uri=http://localhost:8080/kakaologin&response_type=code&scope=account_email,age_range,birthday,gender">
+kakao login
+</a></div>
+
+
+<!-- <script type='text/javascript'>
+  //<![CDATA[
+    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('95b526f7c2c8c50e0c00f16777a6827a');
+    // 카카오 로그인 버튼을 생성합니다.
+    Kakao.Auth.createLoginButton({
+      container: '#kakao-login-btn',
+      success: function(authObj) {
+        // 로그인 성공시, API를 호출합니다.
+        Kakao.API.request({
+          url: '/v2/user/me',
+          success: function(res) {
+            console.log(JSON.stringify(res));
+          },
+          fail: function(error) {
+            console.log(JSON.stringify(error));
+          }
+        });
+      },
+      fail: function(err) {
+        alert(JSON.stringify(err));
+      }
+    });
+  //]]>
+</script> -->
+
+<div id="naver_id_login" style="text-align:center"><a href="https://nid.naver.com/oauth2.0/authorize?client_id=LDp9BYkvyaslYqUOz1h5&response_type=code&redirect_uri=http://localhost:8080/naverlogin">
+<img width="223" src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png"/></a></div>
+
+<div id="google_id_login"><a href = "https://accounts.google.com/o/oauth2/auth?client_id=392762300432-eq62skbdmkuve2p72cmf661mt7daho73.apps.googleusercontent.com
+&redirect_uri=http://localhost:8080/googlelogin&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/plus.me">
+google login
+</a></div>
+<div id="facebook_id_login"><a href = "https://www.facebook.com/v3.2/dialog/oauth?client_id=470771946780386&redirect_uri=http://localhost:8080/facebooklogin&response_type=code&scope=public_profile,user_age_range,user_gender,user_birthday">
+facebook login
+</a></div>
+
+
+
+</html>

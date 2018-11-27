@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://10.10.10.101:3306/jboot_hij?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: injae
+    password: 12345678
+    
+  thymeleaf:
+    cache: false
